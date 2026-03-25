@@ -16,14 +16,11 @@
                 "Origin": "https://bolich12.github.io/cors-test"
             },
             credentials: "include"
-        })
-        .then(response => {
-            if (response.ok) {
-                return response.text();
-            } else {
-                console.error("Failed with status:", response.status);
-            }
-        })
+       })
+    .then(res => res.json())
+    .then(data => {
+        console.log("Exfiltrated:", data);
+    });
         .then(data => console.log("Response data:", data))
         .catch(error => console.error("Error occurred:", error));
     </script>
